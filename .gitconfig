@@ -1,0 +1,8 @@
+[user]
+	email = 59288386+tushgaurav@users.noreply.github.com
+	name = Tushar Gaurav
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
