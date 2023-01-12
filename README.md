@@ -2,6 +2,10 @@
 
 This directory is meant to be located in `~/.dotfiles`.
 
+## What are dot files?
+
+Dot files, also known as **hidden files**, are files on a Unix-based operating system that begin with a "." (dot) character. These files are typically used to store configuration information for various programs and are **hidden by default** in directory listings. Examples of common dot files include `.bashrc`, `.bash_profile`, and `.gitconfig`.
+
 ## .vimrc
 
 Vim is the ultimate text editor and it uses a file name .vimrc for customizations. This section contains some of the most imporntant resources that can be used for customizations.
