@@ -1,0 +1,36 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "explorer.confirmDelete": false,
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": false,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false,
+    "python": false,
+    "javascript": false
+  },
+  "explorer.confirmDragAndDrop": false,
+  "gitlens.defaultTimeFormat": null,
+  "gitlens.defaultDateShortFormat": null,
+  "gitlens.defaultDateFormat": null,
+  "gitlens.defaultDateLocale": null,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "stylelint.configFile": ".stylelinttrc.json",
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+  "[python]": {},
+  "editor.minimap.enabled": false,
+  "editor.fontFamily": "'Fira Mono', Menlo, Monaco, 'Courier New', monospace"
+}
