@@ -5,3 +5,4 @@ cd $BASEDIR
 
 ln -s ${PWD}/bashrc ~/.bashrc 2>/dev/null || true
 ln -s ${PWD}/vimrc ~/.vimrc 2>/dev/null || true
+ln -s ${PWD}/tmux.conf ~/.tmux.conf 2>/dev/null || true
