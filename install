@@ -1,8 +1,45 @@
 #!/usr/bin/env bash
 
+# User Configuration Variables
+# Modify these values for different users
+GIT_USER_EMAIL="tushar.gaurav416@gmail.com"
+GIT_USER_NAME="tushgaurav"
+
 BASEDIR=$(dirname $0)
 cd $BASEDIR
 
-ln -s ${PWD}/bashrc ~/.bashrc 2>/dev/null || true
-ln -s ${PWD}/vimrc ~/.vimrc 2>/dev/null || true
-ln -s ${PWD}/tmux.conf ~/.tmux.conf 2>/dev/null || true
+backup_and_link() {
+    local source=$1
+    local dest=$2
+    if [ -e "$dest" ]; then
+        # If destination exists and isn't already a symlink
+        if [ ! -L "$dest" ]; then
+            echo "Backing up existing $dest to ${dest}.old"
+            mv "$dest" "${dest}.old"
+        fi
+    fi
+    # Create symlink
+    ln -s "$source" "$dest"
+    echo "Linked $source to $dest"
+}
+
+configure_git() {
+    # Set global Git user email and name
+    git config --global user.email "$GIT_USER_EMAIL"
+    git config --global user.name "$GIT_USER_NAME"
+    echo "Git user configuration set:"
+    echo "Email: $GIT_USER_EMAIL"
+    echo "Name: $GIT_USER_NAME"
+}
+
+install_oh_my_bash() {
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+}
+
+# Run installation and configuration steps
+install_oh_my_bash
+configure_git
+backup_and_link ${PWD}/bashrc ~/.bashrc
+backup_and_link ${PWD}/vimrc ~/.vimrc
+backup_and_link ${PWD}/tmux.conf ~/.tmux.conf
+backup_and_link ${PWD}/nvim ~/.config/nvim
