@@ -27,3 +27,5 @@ require("lazy").setup({
 
 	require("plugins.misc"),
 })
+
+vim.cmd.colorscheme "catppuccin"
