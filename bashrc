@@ -1,14 +1,13 @@
 #
 #  |        | .bashrc - bash shell config
 # ~|~|   |(~|/~\ /~~|/~~||   ||/~\/~~|\  /
-#  |  \_/|_)|   |\__|\__| \_/||   \__| \/ 
+#  |  \_/|_)|   |\__|\__| \_/||   \__| \/
 #                \__| www.tushgaurav.in
-
 
 # Enable the subsequent settings only in interactive sessions
 case $- in
-  *i*) ;;
-    *) return;;
+*i*) ;;
+*) return ;;
 esac
 
 export OSH='/home/tushgaurav/.oh-my-bash'
@@ -60,7 +59,7 @@ COMPLETION_WAITING_DOTS="true"
 OMB_USE_SUDO=true
 
 # To enable/disable display of Python virtualenv and condaenv
-OMB_PROMPT_SHOW_PYTHON_VENV=true  # enable
+OMB_PROMPT_SHOW_PYTHON_VENV=true # enable
 # OMB_PROMPT_SHOW_PYTHON_VENV=false # disable
 
 # Which completions would you like to load? (completions can be found in ~/.oh-my-bash/completions/*)
@@ -68,9 +67,9 @@ OMB_PROMPT_SHOW_PYTHON_VENV=true  # enable
 # Example format: completions=(ssh git bundler gem pip pip3)
 # Add wisely, as too many completions slow down shell startup.
 completions=(
-  git
-  composer
-  ssh
+    git
+    composer
+    ssh
 )
 
 # Which aliases would you like to load? (aliases can be found in ~/.oh-my-bash/aliases/*)
@@ -78,7 +77,7 @@ completions=(
 # Example format: aliases=(vagrant composer git-avh)
 # Add wisely, as too many aliases slow down shell startup.
 aliases=(
-  general
+    general
 )
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-bash/plugins/*)
@@ -86,9 +85,9 @@ aliases=(
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
-  bashmarks
-  sudo
+    git
+    bashmarks
+    sudo
 )
 
 # Which plugins would you like to conditionally load? (plugins can be found in ~/.oh-my-bash/plugins/*)
@@ -99,8 +98,9 @@ plugins=(
 #  fi
 
 source "$OSH"/oh-my-bash.sh
+fastfetch -c archey.jsonc
+echo " "
 fortune | lolcat
-neofetch | lolcat
 
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -134,4 +134,15 @@ alias ls="ls -l"
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
 
+. "/home/tushgaurav/.deno/env"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
+# pnpm
+export PNPM_HOME="/home/tushgaurav/.local/share/pnpm"
+case ":$PATH:" in
+*":$PNPM_HOME:"*) ;;
+*) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
