@@ -1,6 +1,10 @@
 # .dotfiles
 
-This directory is meant to be located in `~/.dotfiles`.
+![dotfiles thumbnail](./assets/image.png)
+
+Welcome to my dotfiles repository!
+
+This directory is meant to be located in `~/.dotfiles`. Dotfiles (hidden files beginning with a dot, like `.bashrc`, `.gitconfig`, `.vimrc`) store configuration for your shell, editor, and other tools. Keeping them in version control makes it easy to sync setups across machines.
 
 ## What are dot files?
 
