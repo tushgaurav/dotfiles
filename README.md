@@ -6,7 +6,7 @@ Welcome to my dotfiles repository!
 
 This directory is meant to be located in `~/.dotfiles`. Dotfiles (hidden files beginning with a dot, like `.bashrc`, `.gitconfig`, `.vimrc`) store configuration for your shell, editor, and other tools. Keeping them in version control makes it easy to sync setups across machines.
 
-## What are dot files?
+## What are dotfiles?
 
 Dot files, also known as **hidden files**, are files on a Unix-based operating system that begin with a "." (dot) character. These files are typically used to store configuration information for various programs and are **hidden by default** in directory listings. Examples of common dot files include `.bashrc`, `.bash_profile`, and `.gitconfig`.
 
@@ -34,7 +34,10 @@ The .bashrc file is a script file that’s executed when a user logs in. The fil
 
 tmux is a terminal multiplexer. Allows multiple terminal sessions to be accessed in a single window.
 
-
+Note: Install tree on mac os for the sidebar functionality.
+```bash
+brew install tree
+```
 
 ## Ghostty
 I really like the Zero Configuration Philosopy Ghostty has. I only need to change the theme, but that's also optional, I really like the defaults.
