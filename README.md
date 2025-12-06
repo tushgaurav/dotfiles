@@ -34,6 +34,8 @@ The .bashrc file is a script file that’s executed when a user logs in. The fil
 
 tmux is a terminal multiplexer. Allows multiple terminal sessions to be accessed in a single window.
 
+
+
 ## Ghostty
 I really like the Zero Configuration Philosopy Ghostty has. I only need to change the theme, but that's also optional, I really like the defaults.
 

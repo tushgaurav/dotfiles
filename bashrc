@@ -2,7 +2,7 @@
 #  |        | .bashrc - bash shell config
 # ~|~|   |(~|/~\ /~~|/~~||   ||/~\/~~|\  /
 #  |  \_/|_)|   |\__|\__| \_/||   \__| \/
-#                \__| www.tushgaurav.in
+#                \__| www.tushgaurav.com
 
 # Enable the subsequent settings only in interactive sessions
 case $- in
